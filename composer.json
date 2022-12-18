@@ -1,0 +1,49 @@
+{
+    "name": "wp-innovator/innovator-ai",
+    "description": "Your Virtual AI assistant to make your WordPress content automation journey smooth and beautiful using Open AI.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "ManiruzzamanAkash",
+            "email": "manirujjamanakash@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require": {
+        "php": ">=7.4.0|8.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "dev-master",
+        "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+        "tareq1988/wp-php-cs-fixer": "dev-master",
+        "phpcompatibility/phpcompatibility-wp": "dev-master",
+        "wp-phpunit/wp-phpunit": "^6.0",
+        "yoast/phpunit-polyfills": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WpInnovator\\InnovatorAi\\": "includes/",
+            "WpInnovator\\InnovatorAi\\Tests\\": "tests/phpunit/"
+        }
+    },
+    "scripts": {
+        "phpcs": [
+            "phpcs -p -s"
+        ],
+        "phpcbf": [
+            "phpcbf -p"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
+        ],
+        "test:all": [
+            "phpcs -p -s & vendor/bin/phpunit"
+        ]
+    }
+}
