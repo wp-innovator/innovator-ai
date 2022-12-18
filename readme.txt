@@ -1,5 +1,5 @@
 === Innovator AI - Your Virtual AI assistant to make your WordPress content automation journey smooth and beautiful using Open AI. ===
-Contributors: ManiruzzamanAkash
+Contributors: maniruzzaman-akash
 Donate Link: https://patreon.com/maniruzzaman
 Tags:  artificial ai, innovator ai, ai, ai content, ai post, auto generated content, automatic content, open ai, chatgpt, machine learning, chatgpt api, open ai api, ai integration, new post, automatic ai post, artificial intellegence
 Requires at least: 5.8
@@ -56,7 +56,6 @@ A. No, not right now. We have plans to add image generation soon in the future.
 5. Post new
 6. Block Toolbar
 
-
 == Changelog ==
 
 = v1.0.0 ( Dec 28, 2022 ) =
@@ -65,3 +64,9 @@ A. No, not right now. We have plans to add image generation soon in the future.
 - **new:** Added  Try Now demo in Dashboard Page.
 - **new:** Added  Text Generator Gutenberg block.
 - **new:** Added  Toolbar support for every gutenberg block.
+
+For the changelog history, view the full [changelog.txt](https://raw.githubusercontent.com/wp-innovator/innovator-ai/main/changelog.txt).
+
+== Upgrade Notice ==
+
+= 1.0.0 =
