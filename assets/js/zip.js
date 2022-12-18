@@ -13,7 +13,7 @@ const pluginFiles = [
     'includes/',
     'languages/',
     'templates/',
-    'changelog.txt',
+    'readme.txt',
     'innovator-ai.php',
 ];
 
