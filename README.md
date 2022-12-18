@@ -14,6 +14,14 @@ Let's build something awesome.
 Get every documentation about Innovator AI from our Wiki page - 
 https://github.com/wp-innovator/innovator-ai/wiki
 
+## Changelogs
+
+**v1.0.0 - 18/12/2022**
+
+1. **New Feature :** Settings Page Open AI API key setup.
+1. **New Feature :** Try Now demo in Dashboard Page.
+1. **New Feature :** Text Generator Gutenberg block.
+1. **New Feature :** Toolbar support for every gutenberg block.
 
 ## Demo
 **Dashboard Panel**
