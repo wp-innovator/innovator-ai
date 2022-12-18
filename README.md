@@ -9,6 +9,11 @@ Innovator AI will make your WordPress content editing super exciting with Open A
 
 Let's build something awesome.
 
+## Demo
+**Dashboard Panel**
+
+<img width="1125" alt="Dashboard-Demo" src="https://user-images.githubusercontent.com/17502625/208307192-97ad75ac-3f40-47c1-804e-963f0f89b16c.png">
+
 
 ## Contribution
 
