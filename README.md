@@ -3,6 +3,12 @@ Your Virtual AI assistant to make your WordPress content automation journey smoo
 
 ----
 
+Welcome to Innovator AI, Your Virtual AI assistant to make your WordPress content journey smooth and beautiful using Open AI and ChatGPT.
+
+Innovator AI will make your WordPress content editing super exciting with Open AI and ChatGPT's powerful AI content generationn.
+
+Let's build something awesome.
+
 
 ## Contribution
 
