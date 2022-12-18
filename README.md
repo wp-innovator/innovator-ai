@@ -9,6 +9,12 @@ Innovator AI will make your WordPress content editing super exciting with Open A
 
 Let's build something awesome.
 
+## Documentation
+
+Get every documentation about Innovator AI from our Wiki page - 
+https://github.com/wp-innovator/innovator-ai/wiki
+
+
 ## Demo
 **Dashboard Panel**
 
