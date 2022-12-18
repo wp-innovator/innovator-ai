@@ -14,6 +14,13 @@ Let's build something awesome.
 
 <img width="1125" alt="Dashboard-Demo" src="https://user-images.githubusercontent.com/17502625/208307192-97ad75ac-3f40-47c1-804e-963f0f89b16c.png">
 
+**New Post / Edit Post**
+
+<img width="1120" alt="Post-New" src="https://user-images.githubusercontent.com/17502625/208307914-b837622a-415e-4655-91b1-f2563f1c9b77.png">
+
+**New Post / Edit Post Toolbar**
+
+<img width="1120" alt="Every-Toolbar" src="https://user-images.githubusercontent.com/17502625/208307933-daf66e80-ae66-4694-85e9-43bf10f6e35e.png">
 
 ## Contribution
 
