@@ -11,8 +11,8 @@ $bg_color = $attributes['bgColor'];
 $padding = $attributes['padding'];
 ?>
 <div
-    <?php echo get_block_wrapper_attributes(); // phpcs:ignore ?>
-    style="background-color: <?php echo $bg_color; ?>; padding: <?php echo $padding['top']; ?> <?php echo $padding['right']; ?> <?php echo $padding['bottom']; ?> <?php echo $padding['left']; ?>; "
+    <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
+    style="background-color: <?php echo esc_attr( $bg_color ); ?>; padding: <?php echo esc_attr( $padding['top'] ); ?> <?php echo esc_attr( $padding['right'] ); ?> <?php echo esc_attr( $padding['bottom'] ); ?> <?php echo esc_attr( $padding['left'] ); ?>; "
 >
 	<h2 class="wp-block-innovator-ai-title">
 		<?php echo wp_kses_post( $attributes['title'] ); ?>
