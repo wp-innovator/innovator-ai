@@ -16,12 +16,12 @@ https://github.com/wp-innovator/innovator-ai/wiki
 
 ## Changelogs
 
-**v1.0.0 - 18/12/2022**
+**v1.0.0 - 27/12/2022**
 
 1. **New Feature :** Settings Page Open AI API key setup.
 1. **New Feature :** Try Now demo in Dashboard Page.
 1. **New Feature :** Text Generator Gutenberg block.
-1. **New Feature :** Toolbar support for every gutenberg block.
+1. **New Feature :** Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
 
 ## Demo
 **Dashboard Panel**

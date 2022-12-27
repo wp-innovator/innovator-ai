@@ -47,23 +47,26 @@ A. Yes, we're using Gutenberg block, custom + toolbar support, so that anyone ca
 = Q. Does this support image generation? =
 A. No, not right now. We have plans to add image generation soon in the future.
 
+= Q. Does this plugin support for Woocommerce? =
+A. No, not right now. We have plans to add Woocommerce support soon in the future.
+
 == Screenshots ==
 
-1. Admin Dashboard
-2. Settings Empty
-3. Settings API Key
-4. Dashboard try demo
-5. Post new
-6. Block Toolbar
+1. screenshot-1-admin-dashboard
+2. screenshot-2-settings-empty
+3. screenshot-3-settings-api-key
+4. screenshot-4-dashboard-try-demo
+5. screenshot-5-post-new
+6. screenshot-6-block-toolbar
 
 == Changelog ==
 
-= v1.0.0 ( Dec 28, 2022 ) =
+= v1.0.0 ( Dec 27, 2022 ) =
 
 - **new:** Added  Settings Page Open AI API key setup.
 - **new:** Added  Try Now demo in Dashboard Page.
 - **new:** Added  Text Generator Gutenberg block.
-- **new:** Added  Toolbar support for every gutenberg block.
+- **new:** Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
 
 For the changelog history, view the full [changelog.txt](https://raw.githubusercontent.com/wp-innovator/innovator-ai/main/changelog.txt).
 

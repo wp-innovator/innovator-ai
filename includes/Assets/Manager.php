@@ -145,7 +145,6 @@ class Manager {
                 'images'    => [
                     'logoSm' => INNOVATOR_AI_ASSETS . '/images/logo-sm.png',
                     'logo'   => INNOVATOR_AI_ASSETS . '/images/logo.png',
-                    'logoLg' => INNOVATOR_AI_ASSETS . '/images/logo-lg.png',
                 ]
             ]
         );
