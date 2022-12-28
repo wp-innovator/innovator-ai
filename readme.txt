@@ -18,7 +18,9 @@ Your Virtual AI assistant to make your WordPress content automation journey smoo
 👉 New Feature : Settings Page Open AI API key setup.
 👉 New Feature : Try Now demo in Dashboard Page.
 👉 New Feature : Text Generator Gutenberg block.
-👉 New Feature : Toolbar support for every gutenberg block.
+👉 New Feature : Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
+
+We've used Open AI API keys to generate AI content for your content or article and it's recently using ChatGPT-3 language AI model to generate very human-like AI content.
 
 = Contribute =
 This may have bugs and lack of many features. If you want to contribute on this project, you are more than welcome. Please fork the repository from [Github](https://github.com/wp-innovator/innovator-ai).
@@ -52,16 +54,16 @@ A. No, not right now. We have plans to add Woocommerce support soon in the futur
 
 == Screenshots ==
 
-1. screenshot-1-admin-dashboard
-2. screenshot-2-settings-empty
-3. screenshot-3-settings-api-key
-4. screenshot-4-dashboard-try-demo
-5. screenshot-5-post-new
-6. screenshot-6-block-toolbar
+1. screenshot-1-admin-dashboard.png
+2. screenshot-2-settings-empty.png
+3. screenshot-3-settings-api-key.png
+4. screenshot-4-dashboard-try-demo.png
+5. screenshot-5-post-new.png
+6. screenshot-6-block-toolbar.png
 
 == Changelog ==
 
-= v1.0.0 ( Dec 27, 2022 ) =
+= v1.0.0 ( Dec 28, 2022 ) =
 
 - **new:** Added  Settings Page Open AI API key setup.
 - **new:** Added  Try Now demo in Dashboard Page.
