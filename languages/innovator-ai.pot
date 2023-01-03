@@ -173,7 +173,7 @@ msgid "Inline Padding"
 msgstr ""
 
 #: build/index.js:1
-msgid "Open AI API key is not confiured properly"
+msgid "Open AI API key is not configured properly"
 msgstr ""
 
 #: build/index.js:1
@@ -185,7 +185,7 @@ msgid "Go to settings"
 msgstr ""
 
 #: build/index.js:1
-msgid "AI configuration is successfull."
+msgid "AI configuration is successful."
 msgstr ""
 
 #: build/index.js:1
