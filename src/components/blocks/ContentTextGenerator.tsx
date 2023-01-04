@@ -1,23 +1,23 @@
 /**
  * External dependencies.
  */
-import {useState} from "@wordpress/element";
+import { useState } from "@wordpress/element";
 import ReactHtmlParser from "react-html-parser";
 import Swal from "sweetalert2";
-import {__} from "@wordpress/i18n";
+import { __ } from "@wordpress/i18n";
 
 /**
  * Internal dependencies.
  */
 import Button from "../button/Button";
-import {Input} from "../inputs/Input";
-import {defaultConfigTextGenerator, openai} from "../../utils/open-ai.config";
-import {copyToClipboard} from "../../utils/copy-to-clipboard";
+import { Input } from "../inputs/Input";
+import { defaultConfigTextGenerator, openai } from "../../utils/open-ai.config";
+import { copyToClipboard } from "../../utils/copy-to-clipboard";
 
 export function ContentTextGenerator({
-                                         defaultText = '',
-                                         onContentGenerated = (articleContent) => {}
-                                     }) {
+    defaultText = '',
+    onContentGenerated = (articleContent) => { }
+}) {
     const [contentFrom, setContentFrom] = useState(defaultText);
     const [generatedContent, setGeneratedContent] = useState('');
     const [generating, setGenerating] = useState(false);
@@ -46,14 +46,13 @@ export function ContentTextGenerator({
             let generatedArticle = res.data.choices[0]?.text;
 
             if (generatedArticle !== undefined && generatedArticle.length) {
-                generatedArticle = generatedArticle.substring(1);
                 setHtml(generatedArticle.replace(/(?:\r\n|\r|\n)/g, '<br>'));
                 setGeneratedContent(generatedArticle);
                 setContentFrom('');
                 copyToClipboard(generatedArticle);
                 Swal.fire({
                     title: __('Content generated', 'innovator-ai'),
-                    text: 'Text copied to clipboard.',
+                    text: __('Text copied to clipboard.', 'innovator-ai'),
                     icon: 'success',
                     toast: true,
                     position: 'bottom',
@@ -78,7 +77,6 @@ export function ContentTextGenerator({
         });
     }
 
-
     return (
         <div className="p-3 pb-28">
             <form onSubmit={generateContent}>
@@ -87,7 +85,7 @@ export function ContentTextGenerator({
                     value={contentFrom}
                     className={"mb-2"}
                     placeholder={__('Enter content hint', 'innovator-ai')}
-                    onChange={({name, value}) => setContentFrom(value)}
+                    onChange={({ name, value }) => setContentFrom(value)}
                 />
                 <Button
                     type='default'
