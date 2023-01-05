@@ -144,7 +144,7 @@ export default function Edit({attributes, setAttributes}) {
                     </form>
                 </PanelBody>
                 <PanelBody
-                    title={__('Color SettingsPage', 'innovator-ai')}
+                    title={__('Color Settings', 'innovator-ai')}
                     initialOpen={false}
                 >
                     <ColorPicker
@@ -156,7 +156,7 @@ export default function Edit({attributes, setAttributes}) {
                     />
                 </PanelBody>
                 <PanelBody
-                    title={__('Padding/Margin SettingsPage', 'innovator-ai')}
+                    title={__('Padding/Margin Settings', 'innovator-ai')}
                     initialOpen={false}
                 >
                     <BoxControl

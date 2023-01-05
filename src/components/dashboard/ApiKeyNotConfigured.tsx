@@ -27,7 +27,7 @@ export default function ApiKeyNotConfiguredNotice() {
                 (settings.enable_ai !== 'yes' || settings.api_key.length === 0) ?
                     <div className="mt-5 bg-white shadow-md p-5 max-w-[600px]">
                         <h3 className="font-medium text-lg">
-                            {__('Open AI API key is not confiured properly', 'innovator-ai')}
+                            {__('Open AI API key is not configured properly.', 'innovator-ai')}
                         </h3>
                         <p>
                             {__('To get your automatic AI content generation tool, you must have to activate your Open AI API key and enable the settings.', 'innovator-ai')}
@@ -49,10 +49,10 @@ export default function ApiKeyNotConfiguredNotice() {
                         <div
                             className="md:basis-[50%] mt-5 bg-white shadow-md p-5 flex flex-col justify-center justify-items-center">
                             <h3 className="font-medium text-lg text-success">
-                                {__('AI configuration is successfull.', 'innovator-ai')}
+                                {__('AI configuration is successful.', 'innovator-ai')}
                             </h3>
                             <p className='pb-6'>
-                                {__('You can now use your Automatic AI content generation tool...', 'innovator-ai')}
+                                {__('You can now use your Automatic AI content generation tool.', 'innovator-ai')}
                             </p>
                         </div>
                         <div className="md:basis-[50%] mt-5 bg-white shadow-md p-5 md:ml-4">
@@ -60,7 +60,7 @@ export default function ApiKeyNotConfiguredNotice() {
                                 {__('New content', 'innovator-ai')}
                             </h3>
                             <div className='mt-2'>
-                                {__('Create New post and use our automated AI generated content features', 'innovator-ai')}
+                                {__('Create New post and use our automated AI generated content features.', 'innovator-ai')}
                             </div>
                             <div className='mt-4'>
                                 <a

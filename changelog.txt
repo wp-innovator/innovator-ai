@@ -1,5 +1,11 @@
 ### Changelogs
 
+**v1.1.0 - 05/01/2023**
+
+1. **Update :** Long content article generation support.
+1. **Fix :** Fixed some localization typo.
+1. **Fix :** Fixed some asset loading issue.
+
 **v1.0.0 - 18/12/2022**
 
 1. New Feature : Settings Page Open AI API key setup.

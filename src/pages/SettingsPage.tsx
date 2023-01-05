@@ -35,7 +35,7 @@ export default function SettingsPage() {
                 </button>
             </div>
             <div className="text-left">
-                <PageHeading text={__('Settings Page', 'innovator-ai')}/>
+                <PageHeading text={__('Settings', 'innovator-ai')}/>
             </div>
         </div>
     );

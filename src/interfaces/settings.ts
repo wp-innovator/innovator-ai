@@ -25,7 +25,7 @@ export interface ISettings {
     settingsSaving: boolean;
 
     /**
-     * SettingsPage Form data.
+     * Settings Form data.
      */
     form: ISettingFormData;
 }

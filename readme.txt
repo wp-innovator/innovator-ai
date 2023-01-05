@@ -5,7 +5,7 @@ Tags:  artificial ai, innovator ai, ai, ai content, ai post, auto generated cont
 Requires at least: 5.8
 Tested up to: 6.1.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,12 @@ A. No, not right now. We have plans to add Woocommerce support soon in the futur
 6. screenshot-6-block-toolbar.png
 
 == Changelog ==
+
+= v1.1.0 ( Jan 05, 2023 ) =
+
+- **Update :** Long content article generation support.
+- **Fix :** Fixed some localization typo.
+- **Fix :** Fixed some asset loading issue.
 
 = v1.0.0 ( Dec 28, 2022 ) =
 

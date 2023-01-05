@@ -28,7 +28,7 @@ class Keys {
     const INNOVATOR_AI_VERSION = 'innovator_ai_version';
 
     /**
-     * SettingsPage seeder ran key.
+     * Settings seeder ran key.
      *
      * @var string
      *

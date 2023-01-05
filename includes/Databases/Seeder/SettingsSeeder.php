@@ -7,14 +7,14 @@ use WpInnovator\InnovatorAi\Common\Keys;
 use WpInnovator\InnovatorAi\Settings\Setting;
 
 /**
- * SettingsPage Seeder class.
+ * Settings Seeder class.
  *
  * Seed the initial settings.
  */
 class SettingsSeeder extends DBSeeder {
 
     /**
-     * Run SettingsPage seeder.
+     * Run Settings seeder.
      *
      * @since 1.0.0
      *

@@ -61,8 +61,8 @@ export default function SettingSubmit() {
             .saveSettings(form)
             .then(() => {
                 Swal.fire({
-                    title: __('SettingsPage saved', 'innovator-ai'),
-                    text: __('SettingsPage has been saved successfully.', 'innovator-ai'),
+                    title: __('Settings saved', 'innovator-ai'),
+                    text: __('Settings has been saved successfully.', 'innovator-ai'),
                     icon: 'success',
                     toast: true,
                     position: 'bottom',
