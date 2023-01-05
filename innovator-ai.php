@@ -203,15 +203,23 @@ final class Innovator_Ai {
     }
 
     /**
-     * Include the required files.
+     * Include the required classes.
      *
      * @since 1.0.0
      *
      * @return void
      */
     public function includes(): void {
-	    // Init classes.
-	    $this->init_classes();
+	    // Common classes.
+        $this->container['assets']   = new WpInnovator\InnovatorAi\Assets\Manager();
+        $this->container['blocks']   = new WpInnovator\InnovatorAi\Blocks\Manager();
+        $this->container['rest_api'] = new WpInnovator\InnovatorAi\REST\Api();
+        $this->container['settings'] = new WpInnovator\InnovatorAi\Settings\Manager();
+
+        // Admin classes.
+        if ( $this->is_request( 'admin' ) ) {
+            $this->container['admin_menu'] = new WpInnovator\InnovatorAi\Admin\Menu();
+        }
     }
 
     /**
@@ -245,29 +253,10 @@ final class Innovator_Ai {
     }
 
     /**
-     * Instantiate the required classes.
-     *
-     * @since 1.0.0
-     *
-     * @return void
-     */
-    public function init_classes(): void {
-        // Common classes.
-        $this->container['assets']   = new WpInnovator\InnovatorAi\Assets\Manager();
-        $this->container['blocks']   = new WpInnovator\InnovatorAi\Blocks\Manager();
-        $this->container['rest_api'] = new WpInnovator\InnovatorAi\REST\Api();
-        $this->container['settings'] = new WpInnovator\InnovatorAi\Settings\Manager();
-
-        // Admin classes.
-        if ( $this->is_request( 'admin' ) ) {
-            $this->container['admin_menu'] = new WpInnovator\InnovatorAi\Admin\Menu();
-        }
-    }
-
-    /**
      * Initialize plugin for localization.
      *
      * @uses load_plugin_textdomain()
+     * @uses wp_set_script_translations()
      *
      * @since 1.0.0
      *
@@ -276,11 +265,7 @@ final class Innovator_Ai {
     public function localization_setup(): void {
         load_plugin_textdomain( 'innovator-ai', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-        // Load the React-pages translations.
         if ( is_admin() ) {
-            // Check if handle is registered in wp-script.
-            $this->container['assets']->register_all_scripts();
-
             // Load wp-script translation for innovator-ai-app.
             wp_set_script_translations( 'innovator-ai-app', 'innovator-ai', plugin_dir_path( __FILE__ ) . 'languages/' );
         }
