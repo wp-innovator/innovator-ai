@@ -69,8 +69,8 @@ class Manager {
         return [
             'innovator-ai-app' => [
                 'src'       => INNOVATOR_AI_BUILD . '/index.js',
-                'version'   => filemtime( INNOVATOR_AI_DIR . '/build/index.js' ),
-                'deps'      => ['lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-block-editor', 'wp-data', 'wp-element', 'wp-i18n', 'wp-rich-text'], //$dependency['dependencies'], //
+                'version'   => $dependency['version'],
+                'deps'      => $dependency['dependencies'],
                 'in_footer' => true,
             ],
         ];
