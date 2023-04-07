@@ -12,12 +12,12 @@ import selectors from './selectors';
 import controls from './controls';
 import resolvers from './resolvers';
 
-const settingStore = createReduxStore('innovator-ai/settings', {
-    reducer,
-    actions,
-    selectors,
-    controls,
-    resolvers,
-});
+const settingStore = createReduxStore( 'innovator-ai/settings', {
+	reducer,
+	actions,
+	selectors,
+	controls,
+	resolvers,
+} );
 
 export default settingStore;

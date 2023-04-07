@@ -90,6 +90,7 @@ class SettingsController extends RESTController {
      * Retrieves the group schema, conforming to JSON Schema.
      *
      * @since 1.0.0
+     * @since 1.2.0 Added search_append_text support
      *
      * @return array
      */
@@ -127,6 +128,27 @@ class SettingsController extends RESTController {
                         'sanitize_callback' => 'sanitize_text_field',
                     ],
                 ],
+                'search_append_position' => [
+                    'description' => __( 'Search append position', 'innovator-ai' ),
+                    'type'        => 'string',
+                    'context'     => [ 'view', 'edit' ],
+                    'required'    => false,
+                    'minLength'   => 0,
+                    'arg_options' => [
+                        'sanitize_callback' => 'sanitize_text_field',
+                        'enum' => [ 'before', 'after', '' ],
+                    ],
+                ],
+                'search_append_text' => [
+                    'description' => __( 'Search append text', 'innovator-ai' ),
+                    'type'        => 'string',
+                    'context'     => [ 'view', 'edit' ],
+                    'required'    => false,
+                    'minLength'   => 0,
+                    'arg_options' => [
+                        'sanitize_callback' => 'sanitize_text_field',
+                    ],
+                ],
             ],
         ];
 
@@ -139,6 +161,7 @@ class SettingsController extends RESTController {
      * Prepares setting for create or update.
      *
      * @since 1.0.0
+     * @since 1.2.0 Added search_append_text support
      *
      * @param WP_REST_Request $request Request object.
      *
@@ -148,6 +171,8 @@ class SettingsController extends RESTController {
         $data = [];
 	    $data['enable_ai'] = $request['enable_ai'];
         $data['api_key'] = $request['api_key'];
+        $data['search_append_position'] = $request['search_append_position'] ?? '';
+        $data['search_append_text'] = $request['search_append_text'] ?? '';
 
         return $data;
     }

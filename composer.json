@@ -1,4 +1,5 @@
 {
+    "version": "1.2.0",
     "name": "wp-innovator/innovator-ai",
     "description": "Your Virtual AI assistant to make your WordPress content automation journey smooth and beautiful using Open AI.",
     "type": "wordpress-plugin",

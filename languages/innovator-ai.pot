@@ -1,14 +1,14 @@
 # Copyright (c) 2023 Maniruzzaman Akash. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Innovator AI 1.1.0\n"
+"Project-Id-Version: Innovator AI 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wp-innovator/innovator-ai/issues\n"
 "Last-Translator: manirujjamanakash@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-05T06:13:39+00:00\n"
+"POT-Creation-Date: 2023-04-07T05:32:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: innovator-ai\n"
@@ -37,14 +37,23 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: includes/REST/SettingsController.php:107
+#: includes/REST/SettingsController.php:108
 #: build/index.js:1
 msgid "Enable AI"
 msgstr ""
 
-#: includes/REST/SettingsController.php:121
+#: includes/REST/SettingsController.php:122
 #: build/index.js:1
 msgid "Open AI API Key"
+msgstr ""
+
+#: includes/REST/SettingsController.php:132
+msgid "Search append position"
+msgstr ""
+
+#: includes/REST/SettingsController.php:143
+#: build/index.js:1
+msgid "Search append text"
 msgstr ""
 
 #: includes/Settings/Manager.php:40
@@ -67,6 +76,16 @@ msgstr ""
 #: build/blocks/text-generator/index.js:1
 #: build/index.js:1
 msgid "No"
+msgstr ""
+
+#: build/blocks/text-generator/index.js:1
+#: build/index.js:1
+msgid "Before"
+msgstr ""
+
+#: build/blocks/text-generator/index.js:1
+#: build/index.js:1
+msgid "After"
 msgstr ""
 
 #: build/blocks/text-generator/index.js:1
@@ -111,6 +130,11 @@ msgstr ""
 
 #: build/blocks/text-generator/index.js:1
 #: build/index.js:1
+msgid "Please give a content hint"
+msgstr ""
+
+#: build/blocks/text-generator/index.js:1
+#: build/index.js:1
 msgid "Content hint"
 msgstr ""
 
@@ -121,7 +145,7 @@ msgstr ""
 
 #: build/blocks/text-generator/index.js:1
 #: build/index.js:1
-msgid "Generating..."
+msgid "Generating…"
 msgstr ""
 
 #: build/blocks/text-generator/index.js:1
@@ -206,6 +230,10 @@ msgid "Create New post and use our automated AI generated content features."
 msgstr ""
 
 #: build/index.js:1
+msgid "Add new post"
+msgstr ""
+
+#: build/index.js:1
 msgid "Try demo"
 msgstr ""
 
@@ -239,6 +267,18 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Get your API key from "
+msgstr ""
+
+#: build/index.js:1
+msgid "Search append position (If needs)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Only if you want to append more text on every search query "
+msgstr ""
+
+#: build/index.js:1
+msgid "Enter appended search texts, eg: Write a unique plagiarism free content."
 msgstr ""
 
 #: build/index.js:1

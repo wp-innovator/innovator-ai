@@ -135,14 +135,16 @@ class Manager {
         wp_localize_script( 'innovatorAi',
             'innovatorAi',
             [
-                'enableAi'  => $settings['enable_ai'],
-                'apiKey'    => $settings['api_key'],
-                'urls'      => [
+                'enableAi'             => $settings['enable_ai'],
+                'apiKey'               => $settings['api_key'],
+                'searchAppendPosition' => $settings['search_append_position'] ?? '',
+                'searchAppendText'     => $settings['search_append_text'] ?? '',
+                'urls'                 => [
                     'admin'     => admin_url(),
                     'adminPage' => admin_url( 'admin.php' ),
                     'newPost'   => admin_url( 'post-new.php' ),
                 ],
-                'images'    => [
+                'images'               => [
                     'logoSm' => INNOVATOR_AI_ASSETS . '/images/logo-sm.png',
                     'logo'   => INNOVATOR_AI_ASSETS . '/images/logo.png',
                 ]

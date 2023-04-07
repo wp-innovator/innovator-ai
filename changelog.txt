@@ -1,14 +1,20 @@
 ### Changelogs
 
+**v1.2.0 - 07/04/2023**
+
+1. **Update :** WordPress tested upto 6.2.
+2. **New :** Added appended search text before and after of search query.
+3. **Update :** Updated codebase eslint formatting.
+
 **v1.1.0 - 05/01/2023**
 
 1. **Update :** Long content article generation support.
-1. **Fix :** Fixed some localization typo.
-1. **Fix :** Fixed some asset loading issue.
+2. **Fix :** Fixed some localization typo.
+3. **Fix :** Fixed some asset loading issue.
 
 **v1.0.0 - 18/12/2022**
 
 1. New Feature : Settings Page Open AI API key setup.
-1. New Feature : Try Now demo in Dashboard Page.
-1. New Feature : Text Generator Gutenberg block.
-1. New Feature : Toolbar support for every gutenberg block.
+2. New Feature : Try Now demo in Dashboard Page.
+3. New Feature : Text Generator Gutenberg block.
+4. New Feature : Toolbar support for every gutenberg block.

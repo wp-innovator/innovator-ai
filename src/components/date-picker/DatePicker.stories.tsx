@@ -3,20 +3,20 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import DatePicker from './DatePicker';
 
 export default {
-    title: 'Common/DatePicker',
-    component: DatePicker,
+	title: 'Common/DatePicker',
+	component: DatePicker,
 } as ComponentMeta<typeof DatePicker>;
 
-const Template: ComponentStory<typeof DatePicker> = (args) => (
-    <DatePicker {...args} />
+const Template: ComponentStory<typeof DatePicker> = ( args ) => (
+	<DatePicker { ...args } />
 );
 
-export const DefaultDatePicker = Template.bind({});
+export const DefaultDatePicker = Template.bind( {} );
 DefaultDatePicker.args = {
-    type: 'date-picker',
+	type: 'date-picker',
 };
 
-export const DateRangePicker = Template.bind({});
+export const DateRangePicker = Template.bind( {} );
 DateRangePicker.args = {
-    type: 'date-range-picker',
+	type: 'date-range-picker',
 };
