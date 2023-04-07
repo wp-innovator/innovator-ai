@@ -15,8 +15,8 @@ import './style/tailwind.css';
 import './style/main.scss';
 
 // Render the App component into the DOM
-const InnovatorAiElement = document.getElementById('innovator-ai');
+const InnovatorAiElement = document.getElementById( 'innovator-ai' );
 
-if (InnovatorAiElement) {
-    render(<App />, InnovatorAiElement);
+if ( InnovatorAiElement ) {
+	render( <App />, InnovatorAiElement );
 }

@@ -109,12 +109,12 @@ export interface InputProps {
     /**
      * On change input.
      */
-    onChange?: (val: any) => void;
+    onChange?: ( val: any ) => void;
 
     /**
      * On input handle.
      */
-    onInput?: (val: any) => void;
+    onInput?: ( val: any ) => void;
 
     /**
      * For textarea input, rows.
@@ -189,7 +189,7 @@ export interface InputProps {
     /**
      * Async API URL.
      */
-    asyncCallback?: (val: any, resolve: any) => void;
+    asyncCallback?: ( val: any, resolve: any ) => void;
 
     /**
      * Is the select field will render creatable option.
@@ -199,140 +199,146 @@ export interface InputProps {
     /**
      * On create async callback for select2 input.
      */
-    onCreateAsyncCallback?: (val: any) => void;
+    onCreateAsyncCallback?: ( val: any ) => void;
+
+	/**
+	 * Is the input is select2 and is searchable or not.
+	 */
+	isSearchable?: boolean;
 }
 
-export function Input(props: InputProps) {
-    const {
-        type = 'text',
-        label = '',
-        labelClass = '',
-        labelTooltip = '',
-        placeholder = '',
-        className = '',
-        areaClassName = '',
-        onChange = () => {},
-        onInput = () => {},
-        id = '',
-        value = '',
-        required = false,
-        ref = null,
-        options = [],
-        rows = 4,
-        cols = 90,
-        style = {},
-        autoComplete = 'off',
-        min = 0,
-        max,
-        left = <></>,
-        right = <></>,
-        editorHeight = '200px',
-        hasError = false,
-        showErrorMessage = false,
-        errorMessage = '',
-        isAsync = false,
-        asyncCallback = (val, resolve) => {},
-        onCreateAsyncCallback = (val) => {},
-        isSelectCreatable = false,
-    } = props;
+export function Input( props: InputProps ) {
+	const {
+		type = 'text',
+		label = '',
+		labelClass = '',
+		labelTooltip = '',
+		placeholder = '',
+		className = '',
+		areaClassName = '',
+		onChange = () => {},
+		onInput = () => {},
+		id = '',
+		value = '',
+		required = false,
+		ref = null,
+		options = [],
+		rows = 4,
+		cols = 90,
+		style = {},
+		autoComplete = 'off',
+		min = 0,
+		max,
+		left = <></>,
+		right = <></>,
+		editorHeight = '200px',
+		hasError = false,
+		showErrorMessage = false,
+		errorMessage = '',
+		isAsync = false,
+		asyncCallback = ( val, resolve ) => {},
+		onCreateAsyncCallback = ( val ) => {},
+		isSelectCreatable = false,
+		isSearchable = true,
+	} = props;
 
-    const getClassName = () => {
-        let classNames = `bg-white placeholder:text-placeholder transition px-4 rounded-md font-medium placeholder:font-normal text-sm border border-b border-solid border-slate-300 border-outline-none !shadow-none focus:!outline-none focus:!border-[#EBEFF8] focus:!shadow-[#EBEFF8] required:border-red-500 w-full`;
+	const getClassName = () => {
+		let classNames = `bg-white placeholder:text-placeholder transition px-4 rounded-md font-medium placeholder:font-normal text-sm border border-b border-solid border-slate-300 border-outline-none !shadow-none focus:!outline-none focus:!border-[#EBEFF8] focus:!shadow-[#EBEFF8] required:border-red-500 w-full`;
 
-        switch (type) {
-            case 'text':
-            case 'url':
-            case 'number':
-            case 'date':
-            case 'email':
-            case 'search':
-            case 'currency':
-                classNames += ` !min-h-[40px]`;
-                break;
+		switch ( type ) {
+			case 'text':
+			case 'url':
+			case 'number':
+			case 'date':
+			case 'email':
+			case 'search':
+			case 'currency':
+				classNames += ` !min-h-[40px]`;
+				break;
 
-            case 'textarea':
-                classNames += ``;
-                break;
+			case 'textarea':
+				classNames += ``;
+				break;
 
-            case 'checkbox':
-                classNames += ` !h-6 !w-6 !indeterminate:bg-gray-300 accent-[#1BBC9C]`;
-                break;
+			case 'checkbox':
+				classNames += ` !h-6 !w-6 !indeterminate:bg-gray-300 accent-[#1BBC9C]`;
+				break;
 
-            default:
-                break;
-        }
+			default:
+				break;
+		}
 
-        // For currency, add ml-8 from input
-        if ('currency' === type) {
-            classNames += ' ml-9';
-        }
+		// For currency, add ml-8 from input
+		if ( 'currency' === type ) {
+			classNames += ' ml-9';
+		}
 
-        if (className?.length) {
-            classNames = `${classNames} ${className} `;
-        }
+		if ( className?.length ) {
+			classNames = `${ classNames } ${ className } `;
+		}
 
-        return twMerge(classNames);
-    };
+		return twMerge( classNames );
+	};
 
-    const changeInput = (e: any) => {
-        let { name, value: targetValue }: IInputResponse = e.target;
+	const changeInput = ( e: any ) => {
+		let { name, value: targetValue }: IInputResponse = e.target;
 
-        if ('checkbox' === type) {
-            targetValue = e.target.checked ? 'yes' : 'no';
-        }
+		if ( 'checkbox' === type ) {
+			targetValue = e.target.checked ? 'yes' : 'no';
+		}
 
-        onChange({ name, value: targetValue });
-    };
+		onChange( { name, value: targetValue } );
+	};
 
-    const updatedStyle = {
-        ...style,
-        // @TODO: Refactor this border, shadow later.
-        ...{
-            border: `1px solid ${hasError ? '#E9485E' : '#EBEFF8'}`,
-            boxShadow: 'none',
-        },
-    };
+	const updatedStyle = {
+		...style,
+		// @TODO: Refactor this border, shadow later.
+		...{
+			border: `1px solid ${ hasError ? '#E9485E' : '#EBEFF8' }`,
+			boxShadow: 'none',
+		},
+	};
 
-    const printErrorMessage = () => {
-        if (hasError && showErrorMessage && errorMessage?.length > 0) {
-            return <p className="text-error text-xs">{errorMessage}</p>;
-        }
-    };
+	const printErrorMessage = () => {
+		if ( hasError && showErrorMessage && errorMessage?.length > 0 ) {
+			return <p className="text-error text-xs">{ errorMessage }</p>;
+		}
+	};
 
-    const typeMapper = {
-        currency: 'number',
-    };
+	const typeMapper = {
+		currency: 'number',
+	};
 
-    return (
-        <>
-            {label.length ? (
-                <Label
-                    htmlFor={id}
-                    className={labelClass}
-                    tooltip={
-                        isEmpty(labelTooltip) ? '' : parseHtml(labelTooltip)
-                    }
-                >
-                    {label}
-                </Label>
-            ) : (
-                ''
-            )}
+	return (
+		<>
+			{ label.length ? (
+				<Label
+					htmlFor={ id }
+					className={ labelClass }
+					tooltip={
+						isEmpty( labelTooltip ) ? '' : parseHtml( labelTooltip )
+					}
+				>
+					{ label }
+				</Label>
+			) : (
+				''
+			) }
 
-            <div
-                className={`flex relative ${areaClassName} ${
-                    hasError ? 'text-error' : ''
-                }`}
-            >
-                {'currency' === type ? (
-                    <div className="bg-[#F1F1F4] h-10 w-10 pl-4 pt-2 flex-none absolute top-0 left-0 rounded-none rounded-l-[4px]">
-                        {getGlobalData('currency')?.symbol}
-                    </div>
-                ) : (
-                    left
-                )}
+			<div
+				className={ `flex relative ${ areaClassName } ${
+					hasError ? 'text-error' : ''
+				}` }
+			>
+				{ 'currency' === type ? (
+					<div className="bg-[#F1F1F4] h-10 w-10 pl-4 pt-2 flex-none absolute top-0 left-0 rounded-none rounded-l-[4px]">
+						{ getGlobalData( 'currency' )?.symbol }
+					</div>
+				) : (
+					left
+				) }
 
-                {(type === 'text' ||
+				{ ( type === 'text' ||
                     type === 'url' ||
                     type === 'number' ||
                     type === 'radio' ||
@@ -340,91 +346,93 @@ export function Input(props: InputProps) {
                     type === 'date' ||
                     type === 'email' ||
                     type === 'currency' ||
-                    type === 'search') && (
-                    <input
-                        type={typeMapper[type] ?? type}
-                        ref={ref}
-                        required={required}
-                        placeholder={placeholder}
-                        className={getClassName()}
-                        style={updatedStyle}
-                        onChange={changeInput}
-                        onInput={onInput}
-                        name={id}
-                        id={id}
-                        value={value}
-                        min={min}
-                        max={max}
-                        autoComplete={autoComplete}
-                    />
-                )}
+                    type === 'search' ) &&
+					(
+						<input
+							type={ typeMapper[ type ] ?? type }
+							ref={ ref }
+							required={ required }
+							placeholder={ placeholder }
+							className={ getClassName() }
+							style={ updatedStyle }
+							onChange={ changeInput }
+							onInput={ onInput }
+							name={ id }
+							id={ id }
+							value={ value }
+							min={ min }
+							max={ max }
+							autoComplete={ autoComplete }
+						/>
+					) }
 
-                {type === 'switch' && (
-                    <SwitchCheckbox
-                        enabled={value == '1' || value == 'true'}
-                        setEnabled={(val: any) => {
-                            if (typeof onChange === 'function') {
-                                onChange({
-                                    name: id,
-                                    value: val ? true : false,
-                                });
-                            }
-                        }}
-                    />
-                )}
+				{ type === 'switch' && (
+					<SwitchCheckbox
+						enabled={ value == '1' || value == 'true' }
+						setEnabled={ ( val: any ) => {
+							if ( typeof onChange === 'function' ) {
+								onChange( {
+									name: id,
+									value: val ? true : false,
+								} );
+							}
+						} }
+					/>
+				) }
 
-                {/*{type === 'text-editor' && (*/}
-                {/*    <div className="w-full">*/}
-                {/*        <TextEditor*/}
-                {/*            id={id}*/}
-                {/*            height={editorHeight}*/}
-                {/*            onChange={onChange}*/}
-                {/*            value={value}*/}
-                {/*            placeholder={placeholder}*/}
-                {/*        />*/}
-                {/*    </div>*/}
-                {/*)}*/}
+				{ /*{type === 'text-editor' && (*/ }
+				{ /*    <div className="w-full">*/ }
+				{ /*        <TextEditor*/ }
+				{ /*            id={id}*/ }
+				{ /*            height={editorHeight}*/ }
+				{ /*            onChange={onChange}*/ }
+				{ /*            value={value}*/ }
+				{ /*            placeholder={placeholder}*/ }
+				{ /*        />*/ }
+				{ /*    </div>*/ }
+				{ /*)}*/ }
 
-                {type === 'textarea' && (
-                    <textarea
-                        ref={ref}
-                        required={required}
-                        placeholder={placeholder}
-                        className={getClassName()}
-                        style={updatedStyle}
-                        onChange={changeInput}
-                        onInput={onInput}
-                        id={id}
-                        name={id}
-                        value={value}
-                        rows={rows}
-                        cols={cols}
-                        autoComplete={autoComplete}
-                    ></textarea>
-                )}
+				{ type === 'textarea' && (
+					<textarea
+						ref={ ref }
+						required={ required }
+						placeholder={ placeholder }
+						className={ getClassName() }
+						style={ updatedStyle }
+						onChange={ changeInput }
+						onInput={ onInput }
+						id={ id }
+						name={ id }
+						value={ value }
+						rows={ rows }
+						cols={ cols }
+						autoComplete={ autoComplete }
+					></textarea>
+				) }
 
-                {(type === 'select' || type === 'multiselect') && (
-                    <Select2Input
-                        defaultValue={value}
-                        isMulti={type === 'multiselect'}
-                        options={typeof options !== 'undefined' ? options : []}
-                        placeholder={placeholder}
-                        onChange={(val) => {
-                            if (typeof onChange === 'function') {
-                                onChange({ name: id, value: val });
-                            }
-                        }}
-                        isAsync={isAsync}
-                        asyncCallback={asyncCallback}
-                        isCreatable={isSelectCreatable}
-                        onCreateAsyncCallback={onCreateAsyncCallback}
-                    />
-                )}
+				{ ( type === 'select' || type === 'multiselect' ) && (
+					<Select2Input
+						defaultValue={ value }
+						isMulti={ type === 'multiselect' }
+						options={ typeof options !== 'undefined' ? options : [] }
+						placeholder={ placeholder }
+						onChange={ ( val ) => {
+							if ( typeof onChange === 'function' ) {
+								onChange( { name: id, value: val } );
+							}
+						} }
+						isAsync={ isAsync }
+						asyncCallback={ asyncCallback }
+						isCreatable={ isSelectCreatable }
+						isSearchable={ isSearchable }
+						onCreateAsyncCallback={ onCreateAsyncCallback }
+					/>
+				) }
 
-                {right}
-            </div>
+				{ right }
+			</div>
 
-            {printErrorMessage()}
-        </>
-    );
+			{ printErrorMessage() }
+		</>
+	);
 }

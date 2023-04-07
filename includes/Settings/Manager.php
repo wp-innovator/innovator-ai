@@ -59,6 +59,8 @@ class Manager {
 		return [
 			'enable_ai' => 'no',
 			'api_key'   => '',
+			'search_append_position'   => '',
+			'search_append_text'   => '',
 		];
 	}
 
@@ -68,6 +70,8 @@ class Manager {
 		return [
 			'enable_ai' => $this->sanitize( $data['enable_ai'], 'text' ),
 			'api_key' => $this->sanitize( $data['api_key'], 'text' ),
+			'search_append_position' => $this->sanitize( $data['search_append_position'], 'text' ),
+			'search_append_text' => $this->sanitize( $data['search_append_text'], 'text' ),
 		];
 	}
 }

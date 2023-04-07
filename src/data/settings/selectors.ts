@@ -1,32 +1,32 @@
 /**
  * Internal dependencies.
  */
-import {ISettings} from '../../interfaces';
+import { ISettings } from '../../interfaces';
 
 const selectors = {
-    getSettings(state: ISettings) {
-        const {form} = state;
+	getSettings( state: ISettings ) {
+		const { form } = state;
 
-        return form;
-    },
+		return form;
+	},
 
-    getSettingsSaving(state: ISettings) {
-        const {settingsSaving} = state;
+	getSettingsSaving( state: ISettings ) {
+		const { settingsSaving } = state;
 
-        return settingsSaving;
-    },
+		return settingsSaving;
+	},
 
-    getLoadingSettings(state: ISettings) {
-        const {loadingSettings} = state;
+	getLoadingSettings( state: ISettings ) {
+		const { loadingSettings } = state;
 
-        return loadingSettings;
-    },
+		return loadingSettings;
+	},
 
-    getForm(state: ISettings) {
-        const {form} = state;
+	getForm( state: ISettings ) {
+		const { form } = state;
 
-        return form;
-    },
+		return form;
+	},
 };
 
 export default selectors;

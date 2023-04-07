@@ -17,38 +17,38 @@ export interface IProNotExistTooltip {
     desc?: string;
 }
 
-const ProNotExistTooltip = ({ desc }: IProNotExistTooltip) => {
-    return (
-        <span>
-            {!hasPro && (
-                <>
-                    <Tooltip
-                        innerContent={
-                            <Button
-                                text={__('PRO', 'innovator-ai')}
-                                style={{
-                                    padding: '5px 12px',
-                                    marginLeft: 10,
-                                    border: 0,
-                                }}
-                                buttonCustomClass="bg-amber-400"
-                            />
-                        }
-                    >
-                        {desc}
-                        {__(
-                            'This feature is only available in Pro version.',
-                            'innovator-ai'
-                        )}
-                    </Tooltip>
-                </>
-            )}
-        </span>
-    );
+const ProNotExistTooltip = ( { desc }: IProNotExistTooltip ) => {
+	return (
+		<span>
+			{ ! hasPro && (
+				<>
+					<Tooltip
+						innerContent={
+							<Button
+								text={ __( 'PRO', 'innovator-ai' ) }
+								style={ {
+									padding: '5px 12px',
+									marginLeft: 10,
+									border: 0,
+								} }
+								buttonCustomClass="bg-amber-400"
+							/>
+						}
+					>
+						{ desc }
+						{ __(
+							'This feature is only available in Pro version.',
+							'innovator-ai'
+						) }
+					</Tooltip>
+				</>
+			) }
+		</span>
+	);
 };
 
 ProNotExistTooltip.defaultProps = {
-    desc: __("Sorry, You can't view this.", 'innovator-ai'),
+	desc: __( "Sorry, You can't view this.", 'innovator-ai' ),
 };
 
 export default ProNotExistTooltip;

@@ -3,6 +3,7 @@
 namespace WpInnovator\InnovatorAi\Setup;
 
 use WpInnovator\InnovatorAi\Common\Keys;
+use Exception;
 
 /**
  * Class Installer.
@@ -17,7 +18,7 @@ class Installer {
      * @since 1.0.0
      *
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public function run(): void {
         // Update the installed version.

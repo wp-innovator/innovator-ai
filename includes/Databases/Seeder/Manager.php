@@ -2,6 +2,8 @@
 
 namespace WpInnovator\InnovatorAi\Databases\Seeder;
 
+use Exception;
+
 /**
  * Database Seeder class.
  *
@@ -15,7 +17,7 @@ class Manager {
      * @since 1.0.0
      *
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public function run() {
         $seeder_classes = [

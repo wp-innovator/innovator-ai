@@ -1,11 +1,11 @@
-=== Innovator AI - Your Virtual AI assistant to make your WordPress content automation journey smooth and beautiful using Open AI. ===
+=== Innovator AI ===
 Contributors: maniruzzaman-akash
 Donate Link: https://patreon.com/maniruzzaman
 Tags:  artificial ai, innovator ai, ai, ai content, ai post, auto generated content, automatic content, open ai, chatgpt, machine learning, chatgpt api, open ai api, ai integration, new post, automatic ai post, artificial intellegence
 Requires at least: 5.8
-Tested up to: 6.1.1
+Tested up to: 6.2
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,12 +13,13 @@ Your Virtual AI assistant to make your WordPress content automation journey smoo
 
 == Description ==
 
-= OPEN AI AND CHATGPT AUTOMAITC AI GENERATED CONTENT FOR WORDPRESS =
+= OPEN AI AND CHATGPT AUTOMATIC AI GENERATED CONTENT FOR WORDPRESS =
 
 👉 New Feature : Settings Page Open AI API key setup.
 👉 New Feature : Try Now demo in Dashboard Page.
 👉 New Feature : Text Generator Gutenberg block.
-👉 New Feature : Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
+👉 New Feature : Added  Text Generator AI Popup Toolbar support for every gutenberg block.
+👉 New Feature : Automatic default search text append system before or after search query.
 
 We've used Open AI API keys to generate AI content for your content or article and it's recently using ChatGPT-3 language AI model to generate very human-like AI content.
 
@@ -41,7 +42,10 @@ A. Yes, it's open and no limitation in the free version.
 A. Yes, please visit https://beta.openai.com/account/api-keys and you'll get your API keys.
 
 = Q. Can I get any type of text AI generated content? =
-A. Yes, according to Open AI's ChatGPT, it can now provide almost any type of conntent's suggestion.
+A. Yes, according to Open AI's ChatGPT, it can now provide almost any type of content's suggestion.
+
+= Q. Can I append any default search text before or after the search query? =
+A. Yes, from version 1.2.0, we've added that support.
 
 = Q. Does someone can easily add AI generated content for post? =
 A. Yes, we're using Gutenberg block, custom + toolbar support, so that anyone can easily add AI generated content for WordPress.
@@ -63,6 +67,12 @@ A. No, not right now. We have plans to add Woocommerce support soon in the futur
 
 == Changelog ==
 
+= v1.2.0 - ( April 07, 2023 ) =
+
+- **Update :** WordPress tested upto 6.2.
+- **New :** Added appended search text before and after of search query.
+- **Update :** Updated codebase eslint formatting.
+
 = v1.1.0 ( Jan 05, 2023 ) =
 
 - **Update :** Long content article generation support.
@@ -74,7 +84,7 @@ A. No, not right now. We have plans to add Woocommerce support soon in the futur
 - **new:** Added  Settings Page Open AI API key setup.
 - **new:** Added  Try Now demo in Dashboard Page.
 - **new:** Added  Text Generator Gutenberg block.
-- **new:** Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
+- **new:** Added  Text Generator AI Popup Toolbar support for every gutenberg block.
 
 For the changelog history, view the full [changelog.txt](https://raw.githubusercontent.com/wp-innovator/innovator-ai/main/changelog.txt).
 

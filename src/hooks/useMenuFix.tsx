@@ -10,16 +10,16 @@ import { useLocation } from 'react-router-dom';
 import { menuFix } from '../utils/MenuFix';
 
 export default function useMenuFix() {
-    const location = useLocation();
+	const location = useLocation();
 
-    /**
-     * Call menuFix after any route changes.
-     *
-     * fix the admin menu for the slug
-     */
-    useEffect(() => {
-        menuFix();
-    }, [location.pathname]);
+	/**
+	 * Call menuFix after any route changes.
+	 *
+	 * fix the admin menu for the slug
+	 */
+	useEffect( () => {
+		menuFix();
+	}, [ location.pathname ] );
 
-    return null;
+	return null;
 }

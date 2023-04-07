@@ -25,19 +25,19 @@ interface IInputLabel {
     tooltip?: string | React.ReactNode | undefined;
 }
 
-export default function InputLabel({
-    children = <></>,
-    htmlFor,
-    className = '',
-}: IInputLabel) {
-    return (
-        <label
-            className={twMerge(
-                `block text-black font-bold text-[14px] !ml-0 mb-[13px] mt-4 ${className}`
-            )}
-            htmlFor={htmlFor}
-        >
-            {children}
-        </label>
-    );
+export default function InputLabel( {
+	children = <></>,
+	htmlFor,
+	className = '',
+}: IInputLabel ) {
+	return (
+		<label
+			className={ twMerge(
+				`block text-black font-bold text-[14px] !ml-0 mb-[13px] mt-4 ${ className }`
+			) }
+			htmlFor={ htmlFor }
+		>
+			{ children }
+		</label>
+	);
 }

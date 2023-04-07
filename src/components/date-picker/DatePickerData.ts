@@ -8,9 +8,9 @@ import { add, endOfWeek, startOfMonth, startOfYear, sub } from 'date-fns';
  * Internal dependencies
  */
 import {
-    getCurrentDate,
-    getSubOrAddDaysDate,
-    getFormattedDate,
+	getCurrentDate,
+	getSubOrAddDaysDate,
+	getFormattedDate,
 } from '../../../utils/DateHelper';
 
 export interface IDatePickerData {
@@ -36,112 +36,112 @@ export interface IDatePickerData {
 }
 
 export default function DatePickerData(): Array<IDatePickerData> {
-    const currentDate = getCurrentDate();
+	const currentDate = getCurrentDate();
 
-    return [
-        {
-            name: __('Today', 'innovator-ai'),
-            value: 'today',
-            startDate: currentDate,
-            endDate: currentDate,
-        },
-        {
-            name: __('Yesterday', 'innovator-ai'),
-            value: 'yesterday',
-            startDate: getSubOrAddDaysDate('sub', 1),
-            endDate: getSubOrAddDaysDate('sub', 1),
-        },
-        {
-            name: __('This Month', 'innovator-ai'),
-            value: 'thisMonth',
-            startDate: getFormattedDate(startOfMonth(new Date())),
-            endDate: getFormattedDate(
-                sub(add(startOfMonth(new Date()), { months: 1 }), {
-                    seconds: 1,
-                })
-            ),
-        },
-        {
-            name: __('Last 7 Days', 'innovator-ai'),
-            value: 'last7Days',
-            startDate: getSubOrAddDaysDate('sub', 7),
-            endDate: currentDate,
-        },
-        {
-            name: __('Last 30 Days', 'innovator-ai'),
-            value: 'last30Days',
-            startDate: getSubOrAddDaysDate('sub', 30),
-            endDate: currentDate,
-        },
-        {
-            name: __('Last Week', 'innovator-ai'),
-            value: 'lastWeek',
-            startDate: getFormattedDate(
-                sub(endOfWeek(new Date()), { days: 14 })
-            ),
-            endDate: getFormattedDate(sub(endOfWeek(new Date()), { days: 8 })),
-        },
-        {
-            name: __('Last Month', 'innovator-ai'),
-            value: 'lastMonth',
-            startDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { months: 1 })
-            ),
-            endDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { days: 1 })
-            ),
-        },
-        {
-            name: __('Last Quarter', 'innovator-ai'),
-            value: 'lastQuarter',
-            startDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { months: 3 })
-            ),
-            endDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { days: 1 })
-            ),
-        },
-        {
-            name: __('Last Year', 'innovator-ai'),
-            value: 'lastYear',
-            startDate: getFormattedDate(
-                sub(startOfYear(new Date()), { years: 1 })
-            ),
-            endDate: getFormattedDate(
-                sub(startOfYear(new Date()), { days: 1 })
-            ),
-        },
-        {
-            name: __('Last 6 months', 'innovator-ai'),
-            value: 'last6Months',
-            startDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { months: 6 })
-            ),
-            endDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { days: 1 })
-            ),
-        },
-        {
-            name: __('Last 12 months', 'innovator-ai'),
-            value: 'last12Months',
-            startDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { months: 12 })
-            ),
-            endDate: getFormattedDate(
-                sub(startOfMonth(new Date()), { days: 1 })
-            ),
-        },
-        {
-            name: __('All Time', 'innovator-ai'),
-            value: 'allTime',
-            startDate: '-1',
-            endDate: '-1',
-        },
-        {
-            name: __('Custom Range', 'innovator-ai'),
-            value: 'customRange',
-            startDate: '',
-            endDate: '',
-        },
-    ];
+	return [
+		{
+			name: __( 'Today', 'innovator-ai' ),
+			value: 'today',
+			startDate: currentDate,
+			endDate: currentDate,
+		},
+		{
+			name: __( 'Yesterday', 'innovator-ai' ),
+			value: 'yesterday',
+			startDate: getSubOrAddDaysDate( 'sub', 1 ),
+			endDate: getSubOrAddDaysDate( 'sub', 1 ),
+		},
+		{
+			name: __( 'This Month', 'innovator-ai' ),
+			value: 'thisMonth',
+			startDate: getFormattedDate( startOfMonth( new Date() ) ),
+			endDate: getFormattedDate(
+				sub( add( startOfMonth( new Date() ), { months: 1 } ), {
+					seconds: 1,
+				} )
+			),
+		},
+		{
+			name: __( 'Last 7 Days', 'innovator-ai' ),
+			value: 'last7Days',
+			startDate: getSubOrAddDaysDate( 'sub', 7 ),
+			endDate: currentDate,
+		},
+		{
+			name: __( 'Last 30 Days', 'innovator-ai' ),
+			value: 'last30Days',
+			startDate: getSubOrAddDaysDate( 'sub', 30 ),
+			endDate: currentDate,
+		},
+		{
+			name: __( 'Last Week', 'innovator-ai' ),
+			value: 'lastWeek',
+			startDate: getFormattedDate(
+				sub( endOfWeek( new Date() ), { days: 14 } )
+			),
+			endDate: getFormattedDate( sub( endOfWeek( new Date() ), { days: 8 } ) ),
+		},
+		{
+			name: __( 'Last Month', 'innovator-ai' ),
+			value: 'lastMonth',
+			startDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { months: 1 } )
+			),
+			endDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { days: 1 } )
+			),
+		},
+		{
+			name: __( 'Last Quarter', 'innovator-ai' ),
+			value: 'lastQuarter',
+			startDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { months: 3 } )
+			),
+			endDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { days: 1 } )
+			),
+		},
+		{
+			name: __( 'Last Year', 'innovator-ai' ),
+			value: 'lastYear',
+			startDate: getFormattedDate(
+				sub( startOfYear( new Date() ), { years: 1 } )
+			),
+			endDate: getFormattedDate(
+				sub( startOfYear( new Date() ), { days: 1 } )
+			),
+		},
+		{
+			name: __( 'Last 6 months', 'innovator-ai' ),
+			value: 'last6Months',
+			startDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { months: 6 } )
+			),
+			endDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { days: 1 } )
+			),
+		},
+		{
+			name: __( 'Last 12 months', 'innovator-ai' ),
+			value: 'last12Months',
+			startDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { months: 12 } )
+			),
+			endDate: getFormattedDate(
+				sub( startOfMonth( new Date() ), { days: 1 } )
+			),
+		},
+		{
+			name: __( 'All Time', 'innovator-ai' ),
+			value: 'allTime',
+			startDate: '-1',
+			endDate: '-1',
+		},
+		{
+			name: __( 'Custom Range', 'innovator-ai' ),
+			value: 'customRange',
+			startDate: '',
+			endDate: '',
+		},
+	];
 }

@@ -22,33 +22,33 @@ interface ITooltip {
 }
 
 const defaultTooltipProps = {
-    innerContent: '',
-    className: '',
+	innerContent: '',
+	className: '',
 };
 
-const Tooltip = (props: ITooltip) => {
-    const { children, innerContent, className } = props;
+const Tooltip = ( props: ITooltip ) => {
+	const { children, innerContent, className } = props;
 
-    return (
-        <div className="cp-tooltip relative inline-block ml-2">
-            {innerContent === '' || innerContent === <></> ? (
-                <span className="bg-gray-liter border-gray-dark border-2 rounded-full px-1.5">
-                    <FontAwesomeIcon
-                        icon={faInfo}
-                        className="text-gray-dark"
-                        size="xs"
-                    />
-                </span>
-            ) : (
-                innerContent
-            )}
+	return (
+		<div className="cp-tooltip relative inline-block ml-2">
+			{ innerContent === '' || innerContent === <></> ? (
+				<span className="bg-gray-liter border-gray-dark border-2 rounded-full px-1.5">
+					<FontAwesomeIcon
+						icon={ faInfo }
+						className="text-gray-dark"
+						size="xs"
+					/>
+				</span>
+			) : (
+				innerContent
+			) }
 
-            <span
-                dangerouslySetInnerHTML={{ __html: children }}
-                className={`cp-tooltip-text invisible hover:visible bg-black text-white text-center w-72 absolute z-40 rounded-md px-2 py-1 ${className}`}
-            />
-        </div>
-    );
+			<span
+				dangerouslySetInnerHTML={ { __html: children } }
+				className={ `cp-tooltip-text invisible hover:visible bg-black text-white text-center w-72 absolute z-40 rounded-md px-2 py-1 ${ className }` }
+			/>
+		</div>
+	);
 };
 
 Tooltip.defaultProps = defaultTooltipProps;

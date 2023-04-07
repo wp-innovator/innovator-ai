@@ -5,7 +5,7 @@
  * Description:       Your Virtual AI assistant to make your WordPress content automation journey smooth and beautiful using Open AI.
  * Requires at least: 5.8
  * Requires PHP:      7.4
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            Maniruzzaman Akash<manirujjamanakash@gmail.com>
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,7 @@ final class Innovator_Ai {
      *
      * @var string
      */
-    const VERSION = '1.1.0';
+    const VERSION = '1.2.0';
 
     /**
      * Plugin slug.
@@ -123,7 +123,7 @@ final class Innovator_Ai {
      *
      * @return void
      */
-    public function define_constants() {
+    public function define_constants(): void {
         define( 'INNOVATOR_AI_VERSION', self::VERSION );
         define( 'INNOVATOR_AI_SLUG', self::SLUG );
         define( 'INNOVATOR_AI_FILE', __FILE__ );
@@ -143,7 +143,7 @@ final class Innovator_Ai {
      *
      * @return void
      */
-    public function init_plugin() {
+    public function init_plugin(): void {
         $this->includes();
         $this->init_hooks();
 
@@ -163,7 +163,7 @@ final class Innovator_Ai {
      * @return void
      * @throws Exception
      */
-    public function activate() {
+    public function activate(): void {
         // Run the installer to create necessary migrations and seeders.
         $this->install();
     }

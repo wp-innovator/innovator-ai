@@ -9,8 +9,8 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import {
-    formatSelect2Data,
-    getSelectedOption,
+	formatSelect2Data,
+	getSelectedOption,
 } from '../../utils/Select2Helper';
 
 export interface Select2SingleRow {
@@ -49,98 +49,109 @@ export interface ISelect2Input {
     /**
      * On change select2 input.
      */
-    onChange?: (val: any) => void;
+    onChange?: ( val: any ) => void;
+
+	/**
+	 * Is the select2 is searchable or not.
+	 */
+	isSearchable?: boolean;
 }
 
-const Select2Input = (props: ISelect2Input) => {
-    const { options, isMulti, placeholder, defaultValue, onChange } = props;
+const Select2Input = ( {
+	options,
+	isMulti = false,
+	placeholder = '',
+	defaultValue,
+	onChange,
+	isSearchable = true,
+}: ISelect2Input ) => {
+	const animatedComponents = makeAnimated();
 
-    const animatedComponents = makeAnimated();
+	const styles = {
+		container: ( base: any ) => ( {
+			...base,
+			width: '100%',
+			height: '100%',
+			margin: '0',
+			padding: '0',
+			border: 'none',
+			borderRadius: '0',
+			boxShadow: 'none',
+			backgroundColor: 'transparent',
+			'&:hover': {
+				border: 'none',
+				boxShadow: 'none',
+				backgroundColor: 'transparent',
+			},
+		} ),
+		control: ( base: any, state: any ) => ( {
+			...base,
+			borderColor: state.isFocused ? '#787878' : '#dddddd',
+			boxShadow: 'none',
+			'&:hover': {
+				borderColor: '#787878',
+			},
+			height: '28px',
+			minHeight: '36px',
+			fontSize: '12px',
+		} ),
+		menuList: ( base: any ) => ( {
+			...base,
+			width: 'auto',
+			minWidth: '200px',
+			backgroundColor: '#FFFFFF',
+			fontSize: '12px',
+		} ),
+		multiValueLabel: ( base: any ) => ( {
+			...base,
+			color: '#787878',
+			fontWeight: 'normal',
+		} ),
+		valueContainer: ( base: any ) => ( {
+			...base,
+			padding: '0',
+			cursor: 'pointer',
+			paddingLeft: '12px',
+		} ),
+		indicatorSeparator: ( base: any ) => ( {
+			...base,
+			marginLeft: '10px',
+		} ),
+	};
 
-    const styles = {
-        container: (base: any) => ({
-            ...base,
-            width: '100%',
-            height: '100%',
-            margin: '0',
-            padding: '0',
-            border: 'none',
-            borderRadius: '0',
-            boxShadow: 'none',
-            backgroundColor: 'transparent',
-            '&:hover': {
-                border: 'none',
-                boxShadow: 'none',
-                backgroundColor: 'transparent',
-            },
-        }),
-        control: (base: any, state: any) => ({
-            ...base,
-            borderColor: state.isFocused ? '#787878' : '#dddddd',
-            boxShadow: 'none',
-            '&:hover': {
-                borderColor: '#787878',
-            },
-            height: '28px',
-            minHeight: '36px',
-            fontSize: '12px',
-        }),
-        menuList: (base: any) => ({
-            ...base,
-            width: 'auto',
-            minWidth: '200px',
-            backgroundColor: '#FFFFFF',
-            fontSize: '12px',
-        }),
-        multiValueLabel: (base: any) => ({
-            ...base,
-            color: '#787878',
-            fontWeight: 'normal',
-        }),
-        valueContainer: (base: any) => ({
-            ...base,
-            padding: '0',
-            cursor: 'pointer',
-            paddingLeft: '12px',
-        }),
-        indicatorSeparator: (base: any) => ({
-            ...base,
-            marginLeft: '10px',
-        }),
-    };
-
-    return (
-        <Select
-            styles={styles}
-            components={animatedComponents}
-            options={formatSelect2Data(options)}
-            isMulti={isMulti}
-            value={
-                isMulti
-                    ? formatSelect2Data(defaultValue)
-                    : getSelectedOption(options, defaultValue)
-            }
-            defaultValue={
-                isMulti
-                    ? formatSelect2Data(defaultValue)
-                    : getSelectedOption(options, defaultValue)
-            }
-            placeholder={
-                placeholder ? placeholder : __('-- Select --', 'innovator-ai')
-            }
-            onChange={(value) => {
-                if (typeof onChange === 'function') {
-                    onChange(value);
-                }
-            }}
-        />
-    );
+	return (
+		<Select
+			styles={ styles }
+			components={ animatedComponents }
+			options={ formatSelect2Data( options ) }
+			isMulti={ isMulti }
+			value={
+				isMulti
+					? formatSelect2Data( defaultValue )
+					: getSelectedOption( options, defaultValue )
+			}
+			defaultValue={
+				isMulti
+					? formatSelect2Data( defaultValue )
+					: getSelectedOption( options, defaultValue )
+			}
+			placeholder={
+				placeholder ? placeholder : __( '-- Select --', 'innovator-ai' )
+			}
+			onChange={ ( value ) => {
+				if ( typeof onChange === 'function' ) {
+					onChange( value );
+				}
+			} }
+			isSearchable={ isSearchable }
+		/>
+	);
 };
 
 Select2Input.defaultProps = {
-    options: [],
-    placeholder: '',
-    isMulti: false,
+	options: [],
+	placeholder: '',
+	isMulti: false,
 };
 
 export default Select2Input;

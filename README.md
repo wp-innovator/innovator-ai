@@ -7,7 +7,9 @@ Requires at least: 5.8
 
 Requires PHP: 7.4
 
-Stable tag: 1.1.0
+Stable tag: 1.2.0
+
+Tested up to: 6.2
 
 Author: Maniruzzaman Akash<manirujjamanakash@gmail.com>
 
@@ -31,8 +33,9 @@ Let's build something awesome.
 ---
 Any WordPress site owner / user can -
 1. Generate AI content easily with Open AI's ChatGPT-3 language model.
-1. Generate AI content using Custom gutenberg block.
-1. Generate AI content using every gutenberg block from toolbar.
+2. Generate AI content using Custom gutenberg block.
+3. Generate AI content using every gutenberg block from toolbar.
+4. Generate AI content using every gutenberg block from toolbar.
 
 ## Documentation
 ---
@@ -45,18 +48,25 @@ Innovator AI has been made to make your WordPress content management journey eas
 
 ## Changelogs
 ---
+
+**v1.2.0 - 07/04/2023**
+
+1. **Update :** WordPress tested upto 6.2.
+2. **New :** Added appended search text before and after of search query.
+3. **Update :** Updated codebase eslint formatting.
+
 **v1.1.0 - 05/01/2023**
 
 1. **Update :** Long content article generation support.
-1. **Fix :** Fixed some localization typo.
-1. **Fix :** Fixed some asset loading issue.
+2. **Fix :** Fixed some localization typo.
+3. **Fix :** Fixed some asset loading issue.
 
 **v1.0.0 - 27/12/2022**
 
 1. **New Feature :** Settings Page Open AI API key setup.
-1. **New Feature :** Try Now demo in Dashboard Page.
-1. **New Feature :** Text Generator Gutenberg block.
-1. **New Feature :** Added  Text Gennerator AI Popup Toolbar support for every gutenberg block.
+2. **New Feature :** Try Now demo in Dashboard Page.
+3. **New Feature :** Text Generator Gutenberg block.
+4. **New Feature :** Added  Text Generator AI Popup Toolbar support for every gutenberg block.
 
 ## Demo
 ---
@@ -88,5 +98,5 @@ Then, fork this repository and make your Pull-Request. I'll approve, if everythi
 It's me, Maniruzzaman Akash - A Fullstack WordPress plugin developer with the expertise of PHP, WordPress, React, Next JS, Typescript, Laravel, MySQL, Docker and so on. Find me at 
 
 1. Email - manirujjamanakash@gmail.com
-1. Github - https://github.com/ManiruzzamanAkash
-1. Linkedin - https://www.linkedin.com/in/maniruzzamanakash
+2. Github - https://github.com/ManiruzzamanAkash
+3. Linkedin - https://www.linkedin.com/in/maniruzzamanakash

@@ -7,19 +7,19 @@ import { __ } from '@wordpress/i18n';
  *
  * @return {Object | string} Global settings related data.
  */
-export const getGlobalData = (key: string = '') => {
-    const data =
+export const getGlobalData = ( key: string = '' ) => {
+	const data =
         typeof window?.cart_pulse === 'undefined' ? {} : window?.cart_pulse;
 
-    if (typeof data === 'undefined') {
-        return data;
-    }
+	if ( typeof data === 'undefined' ) {
+		return data;
+	}
 
-    if (!key.length) {
-        return data;
-    }
+	if ( ! key.length ) {
+		return data;
+	}
 
-    return data[key];
+	return data[ key ];
 };
 
 /**
@@ -27,7 +27,7 @@ export const getGlobalData = (key: string = '') => {
  *
  * @return {boolean}
  */
-export const hasPro = !!getGlobalData('hasPro');
+export const hasPro = !! getGlobalData( 'hasPro' );
 
 /**
  * Get email frequency units.
@@ -35,18 +35,18 @@ export const hasPro = !!getGlobalData('hasPro');
  * @return {Array}
  */
 export const emailFrequencyUnits = [
-    {
-        label: __('Minute', 'innovator-ai'),
-        value: 'minute',
-    },
-    {
-        label: __('Hour', 'innovator-ai'),
-        value: 'hour',
-    },
-    {
-        label: __('Day', 'innovator-ai'),
-        value: 'day',
-    },
+	{
+		label: __( 'Minute', 'innovator-ai' ),
+		value: 'minute',
+	},
+	{
+		label: __( 'Hour', 'innovator-ai' ),
+		value: 'hour',
+	},
+	{
+		label: __( 'Day', 'innovator-ai' ),
+		value: 'day',
+	},
 ];
 
 /**
